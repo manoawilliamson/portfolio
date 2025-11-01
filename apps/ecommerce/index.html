@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModernWear - Premium Fashion Collection</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <h1>ModernWear</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#collection">Collection</a></li>
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="#" class="nav-icon"><i class="fas fa-search"></i></a>
+                    <a href="#" class="nav-icon"><i class="fas fa-user"></i></a>
+                    <a href="#" class="nav-icon cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                <div class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" role="button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h4>Summer Collection 2025</h4>
+                    <h1>Elevate Your Style With Our Premium Collection</h1>
+                    <p>Discover the latest trends in fashion with our handpicked selection of premium clothing and accessories.</p>
+                    <div class="hero-buttons">
+                        <a href="#collection" class="btn btn-primary">Shop Now</a>
+                        <a href="#featured" class="btn btn-outline">Explore</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=720&q=80" alt="Fashion Model">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-truck"></i></div>
+                    <div class="feature-text">
+                        <h3>Free Shipping</h3>
+                        <p>On all orders over $50</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-undo"></i></div>
+                    <div class="feature-text">
+                        <h3>Easy Returns</h3>
+                        <p>30-day return policy</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-lock"></i></div>
+                    <div class="feature-text">
+                        <h3>Secure Payment</h3>
+                        <p>100% secure checkout</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                    <div class="feature-text">
+                        <h3>24/7 Support</h3>
+                        <p>Dedicated support team</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section id="collection" class="collection">
+        <div class="container">
+            <div class="section-header">
+                <h4>Our Collection</h4>
+                <h2>Shop By Category</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="category-tabs" role="tablist">
+                <button class="category-tab active" data-category="all" role="tab" aria-selected="true">All</button>
+                <button class="category-tab" data-category="women" role="tab" aria-selected="false">Women</button>
+                <button class="category-tab" data-category="men" role="tab" aria-selected="false">Men</button>
+                <button class="category-tab" data-category="accessories" role="tab" aria-selected="false">Accessories</button>
+            </div>
+            <div class="products-grid">
+                <!-- Product cards -->
+                <div class="product-card" data-category="women">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=705&q=80" alt="Floral Summer Dress">
+                        <div class="product-tags"><span class="tag tag-new">New</span></div>
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Add to wishlist"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Add to cart"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="action-btn" aria-label="Quick view"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Floral Summer Dress</h3>
+                        <div class="product-price"><span class="price">$49.99</span></div>
+                        <div class="product-rating" aria-label="Rated 4.5 out of 5">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <span>(24)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="men">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=687&q=80" alt="Classic Denim Jacket">
+                        <div class="product-tags"><span class="tag tag-sale">-20%</span></div>
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Add to wishlist"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Add to cart"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="action-btn" aria-label="Quick view"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Classic Denim Jacket</h3>
+                        <div class="product-price"><span class="price-old">$89.99</span><span class="price">$71.99</span></div>
+                        <div class="product-rating" aria-label="Rated 5 out of 5">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(42)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=735&q=80" alt="Leather Handbag">
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Add to wishlist"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Add to cart"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="action-btn" aria-label="Quick view"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Leather Handbag</h3>
+                        <div class="product-price"><span class="price">$129.99</span></div>
+                        <div class="product-rating" aria-label="Rated 4 out of 5">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(18)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="women">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1551163943-3f7aefc47fe9?auto=format&fit=crop&w=764&q=80" alt="Elegant Silk Blouse">
+                        <div class="product-tags"><span class="tag tag-new">New</span></div>
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Add to wishlist"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Add to cart"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="action-btn" aria-label="Quick view"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Elegant Silk Blouse</h3>
+                        <div class="product-price"><span class="price">$59.99</span></div>
+                        <div class="product-rating" aria-label="Rated 5 out of 5">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(31)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="men">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=764&q=80" alt="Wool Blend Sweater">
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Add to wishlist"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Add to cart"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="action-btn" aria-label="Quick view"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Wool Blend Sweater</h3>
+                        <div class="product-price"><span class="price">$79.99</span></div>
+                        <div class="product-rating" aria-label="Rated 4 out of 5">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(15)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=694&q=80" alt="Minimalist Watch">
+                        <div class="product-tags"><span class="tag tag-sale">-15%</span></div>
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Add to wishlist"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Add to cart"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="action-btn" aria-label="Quick view"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Minimalist Watch</h3>
+                        <div class="product-price"><span class="price-old">$199.99</span><span class="price">$169.99</span></div>
+                        <div class="product-rating" aria-label="Rated 4.5 out of 5">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <span>(27)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="women">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?auto=format&fit=crop&w=1470&q=80" alt="High-Waisted Jeans">
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Add to wishlist"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Add to cart"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="action-btn" aria-label="Quick view"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">High-Waisted Jeans</h3>
+                        <div class="product-price"><span class="price">$69.99</span></div>
+                        <div class="product-rating" aria-label="Rated 4 out of 5">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(22)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="men">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1626497764746-6dc36546b388?auto=format&fit=crop&w=726&q=80" alt="Casual Linen Shirt">
+                        <div class="product-actions">
+                            <button class="action-btn" aria-label="Add to wishlist"><i class="fas fa-heart"></i></button>
+                            <button class="action-btn" aria-label="Add to cart"><i class="fas fa-shopping-cart"></i></button>
+                            <button class="action-btn" aria-label="Quick view"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Casual Linen Shirt</h3>
+                        <div class="product-price"><span class="price">$54.99</span></div>
+                        <div class="product-rating" aria-label="Rated 4.5 out of 5">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <span>(19)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="collection-footer">
+                <a href="#" class="btn btn-outline">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section id="featured" class="featured">
+        <div class="container">
+            <div class="featured-grid">
+                <div class="featured-item large">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1470&q=80" alt="Summer Collection">
+                    <div class="featured-content">
+                        <h3>Summer Collection</h3>
+                        <p>Light fabrics for hot days</p>
+                        <a href="#" class="btn btn-light">Shop Now</a>
+                    </div>
+                </div>
+                <div class="featured-item">
+                    <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=687&q=80" alt="Accessories">
+                    <div class="featured-content">
+                        <h3>Accessories</h3>
+                        <p>Complete your look</p>
+                        <a href="#" class="btn btn-light">Shop Now</a>
+                    </div>
+                </div>
+                <div class="featured-item">
+                    <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=687&q=80" alt="Footwear">
+                    <div class="featured-content">
+                        <h3>Footwear</h3>
+                        <p>Step in style</p>
+                        <a href="#" class="btn btn-light">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Subscribe to Our Newsletter</h2>
+                    <p>Get the latest updates on new products and upcoming sales</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h4>Testimonials</h4>
+                <h2>What Our Customers Say</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="testimonials-slider" aria-live="polite">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The quality of the clothes is amazing! I've been shopping here for years and have never been disappointed. The customer service is also top-notch."</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sarah Johnson">
+                        <div class="author-info"><h4>Sarah Johnson</h4><p>Loyal Customer</p></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"I love the variety of styles available. There's something for everyone, and the prices are reasonable for the quality you get. Fast shipping too!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen">
+                        <div class="author-info"><h4>Michael Chen</h4><p>Fashion Enthusiast</p></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The return process was so easy when I needed to exchange a size. Their customer service team was helpful and friendly. Will definitely shop here again!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Emily Rodriguez">
+                        <div class="author-info"><h4>Emily Rodriguez</h4><p>New Customer</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots" role="tablist" aria-label="Testimonials navigation">
+                <button class="dot active" aria-label="Slide 1" role="tab"></button>
+                <button class="dot" aria-label="Slide 2" role="tab"></button>
+                <button class="dot" aria-label="Slide 3" role="tab"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section class="instagram">
+        <div class="container">
+            <div class="section-header">
+                <h4>Follow Us</h4>
+                <h2>@ModernWear on Instagram</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="instagram-grid">
+                <a href="#" class="instagram-item" aria-label="Instagram post">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=720&q=80" alt="Instagram Post">
+                    <div class="instagram-overlay"><i class="fab fa-instagram"></i></div>
+                </a>
+                <a href="#" class="instagram-item" aria-label="Instagram post">
+                    <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1473&q=80" alt="Instagram Post">
+                    <div class="instagram-overlay"><i class="fab fa-instagram"></i></div>
+                </a>
+                <a href="#" class="instagram-item" aria-label="Instagram post">
+                    <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=686&q=80" alt="Instagram Post">
+                    <div class="instagram-overlay"><i class="fab fa-instagram"></i></div>
+                </a>
+                <a href="#" class="instagram-item" aria-label="Instagram post">
+                    <img src="https://images.unsplash.com/photo-1566206091558-7f218b696731?auto=format&fit=crop&w=764&q=80" alt="Instagram Post">
+                    <div class="instagram-overlay"><i class="fab fa-instagram"></i></div>
+                </a>
+                <a href="#" class="instagram-item" aria-label="Instagram post">
+                    <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=764&q=80" alt="Instagram Post">
+                    <div class="instagram-overlay"><i class="fab fa-instagram"></i></div>
+                </a>
+                <a href="#" class="instagram-item" aria-label="Instagram post">
+                    <img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=687&q=80" alt="Instagram Post">
+                    <div class="instagram-overlay"><i class="fab fa-instagram"></i></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>Have questions about our products or services? Contact us and we'll get back to you as soon as possible.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div><h3>Address</h3><p>123 Fashion Street, New York, NY 10001</p></div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div><h3>Phone</h3><p>+1 (555) 123-4567</p></div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div><h3>Email</h3><p>info@modernwear.com</p></div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div><h3>Working Hours</h3><p>Mon - Fri: 9AM - 6PM</p><p>Sat: 10AM - 4PM</p></div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form id="contact-form">
+                        <div class="form-group"><input type="text" id="name" placeholder="Your Name" required></div>
+                        <div class="form-group"><input type="email" id="email" placeholder="Your Email" required></div>
+                        <div class="form-group"><input type="text" id="subject" placeholder="Subject"></div>
+                        <div class="form-group"><textarea id="message" placeholder="Your Message" rows="5" required></textarea></div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>ModernWear</h2>
+                    <p>Premium fashion for the modern individual. Quality, style, and comfort in every piece.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#collection">Shop</a></li>
+                        <li><a href="#featured">Featured</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Delivery Information</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <div class="payment-methods" aria-label="Accepted payment methods">
+                        <span><i class="fab fa-cc-visa"></i></span>
+                        <span><i class="fab fa-cc-mastercard"></i></span>
+                        <span><i class="fab fa-cc-amex"></i></span>
+                        <span><i class="fab fa-cc-paypal"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 ModernWear. All Rights Reserved.</p></div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Fallback if JS is disabled
+        document.documentElement.classList.add('js');
+    </script>
+</body>
+</html>
