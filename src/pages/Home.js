@@ -36,7 +36,7 @@ const Subtitle = styled(motion.h2)`
 
 const CTA = styled(motion(Link))`
   padding: 1rem 2rem;
-  background-color: black;
+  background: linear-gradient(135deg, #000000ff, #69676bff);
   color: #ffffffff;
   border: none;
   border-radius: 0;

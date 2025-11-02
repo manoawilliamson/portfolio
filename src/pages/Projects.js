@@ -78,13 +78,24 @@ const ProjectDescription = styled.p`
 `;
 
 const ProjectLink = styled(Link)`
-  color: #000;
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, #000000ff, #69676bff);
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
-  border-bottom: 1px solid #000;
-  
+  border: none;
+  border-radius: 0;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    text-align: center;
+  }
+
   &:hover {
-    opacity: 0.7;
+    transform: translateY(-2px);
+    opacity: 0.85;
   }
 `;
 
