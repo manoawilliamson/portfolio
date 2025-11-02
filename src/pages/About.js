@@ -28,7 +28,7 @@ const AboutImage = styled(motion.img)`
   width: 500%;
   max-width: 500px;
   height: 500px;
-  border-radius: 10px;s
+  border-radius: 10px;
   object-fit: cover;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   margin: 0 auto;
