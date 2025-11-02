@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import AboutImageFile from '../assets/picture.JPG'; // ✅ Correct relative path
+import AboutImageFile from '../assets/picture.JPG'; // ✅ Ensure your image is here
+
+// ====== Styled Components ======
 
 const AboutSection = styled.section`
   padding: 5rem 2rem;
-  background-color: #fff;
+  background-color: #ffffff;
 `;
 
 const Container = styled.div`
@@ -17,21 +19,29 @@ const AboutGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  
+  align-items: center;
+
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    text-align: center;
   }
 `;
 
-// ✅ Responsive image styling
+// ✅ Fully responsive image with correct ratio
 const AboutImage = styled(motion.img)`
-  width: 500%;
-  max-width: 500px;
-  height: 500px;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 3 / 4; /* 600x800 proportion */
+  height: auto;
   border-radius: 10px;
   object-fit: cover;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   margin: 0 auto;
+  display: block;
+
+  @media (max-width: 768px) {
+    max-width: 90%;
+  }
 `;
 
 const AboutContent = styled.div``;
@@ -45,7 +55,7 @@ const Title = styled.h2`
 const Subtitle = styled.h3`
   font-size: clamp(1.1rem, 3.5vw, 1.5rem);
   margin-bottom: 1rem;
-  color: #0a192f;
+  color: #0a192f; /* Dark blue accent */
 `;
 
 const Description = styled.p`
@@ -56,7 +66,7 @@ const Description = styled.p`
 
 const SkillsSection = styled.section`
   padding: 5rem 2rem;
-  background-color: #f9f9f9;
+  background-color: #f5f7fa;
 `;
 
 const SkillsGrid = styled.div`
@@ -75,23 +85,33 @@ const SkillCard = styled(motion.div)`
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   text-align: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
 `;
 
 const SkillIcon = styled.div`
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #0a192f;
+  color: #0a192f; /* Dark blue */
 `;
 
 const SkillTitle = styled.h3`
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
   color: #000;
 `;
 
 const SkillDescription = styled.p`
-  color: #666;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
 `;
+
+// ====== Component ======
 
 const About = () => {
   return (
@@ -99,20 +119,20 @@ const About = () => {
       <AboutSection>
         <Container>
           <AboutGrid>
-            {/* ✅ Image now fixed to 600x800 */}
+            {/* ✅ Responsive Image */}
             <AboutImage
               src={AboutImageFile}
               alt="Manoa Williamson"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
             />
 
             <AboutContent>
               <Title>About Me</Title>
               <Subtitle>Web Designer & Developer</Subtitle>
               <Description>
-                Hello! I'm Manoa Williamson, a passionate web designer and developer with over 5 years of experience creating beautiful, functional websites and applications.
+                Hello! I'm <strong>Manoa Williamson</strong>, a passionate web designer and developer with over 5 years of experience creating beautiful, functional websites and applications.
               </Description>
               <Description>
                 I specialize in creating responsive, user-friendly interfaces that not only look great but also provide an exceptional user experience. My approach combines creative design thinking with technical expertise to deliver solutions that exceed client expectations.
@@ -125,7 +145,7 @@ const About = () => {
         </Container>
       </AboutSection>
 
-      {/* Skills Section */}
+      {/* ====== Skills Section ====== */}
       <SkillsSection>
         <Container>
           <Title style={{ textAlign: 'center', marginBottom: '3rem' }}>My Skills</Title>
