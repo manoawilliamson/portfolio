@@ -21,8 +21,12 @@ const Title = styled.h2`
 
 const ProjectsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem;
+  
+  @media (max-width: 768px) {
+    gap: 1.5rem;
+  }
 `;
 
 const ProjectCard = styled(motion.div)`
@@ -42,6 +46,10 @@ const ProjectImage = styled.img`
   width: 100%;
   height: 250px;
   object-fit: cover;
+  
+  @media (max-width: 768px) {
+    height: 180px;
+  }
 `;
 
 const ProjectContent = styled.div`

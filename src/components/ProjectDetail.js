@@ -27,10 +27,14 @@ const BackButton = styled(Link)`
 
 const HeroImage = styled.img`
   width: 100%;
-  height: 500px;
+  height: 50vh;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 3rem;
+
+  @media (max-width: 768px) {
+    height: 300px;
+  }
 `;
 
 const Title = styled.h1`
@@ -80,19 +84,23 @@ const TechStack = styled.div`
 `;
 
 const TechItem = styled.span`
-  background-color: #f5f5f5;
-  color: #000;
+  background-color: #e9f0ff;
+  color: #6e8efb;
   padding: 0.5rem 1rem;
-  border-radius: 0;
+  border-radius: 30px;
   font-size: 0.9rem;
   font-weight: 500;
 `;
 
 const Gallery = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1.5rem;
   margin: 2rem 0;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const GalleryImage = styled.img`
@@ -102,6 +110,10 @@ const GalleryImage = styled.img`
   border-radius: 8px;
   transition: transform 0.3s ease;
   
+  @media (max-width: 768px) {
+    height: 200px;
+  }
+
   &:hover {
     transform: scale(1.02);
   }
@@ -117,6 +129,12 @@ const CTAButton = styled(motion.a)`
   font-weight: 600;
   text-decoration: none;
   margin-top: 2rem;
+  transition: transform 0.3s ease;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    text-align: center;
+  }
 `;
 
 const ProjectDetail = ({ project }) => {
@@ -155,13 +173,13 @@ const ProjectDetail = ({ project }) => {
           ))}
         </Gallery>
         
-        {project.liveUrl && (
-          <CTAButton 
-            as="a"
-            href={project.liveUrl} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
+       {project.liveUrl && (
+         <CTAButton 
+           as="a"
+            href={process.env.PUBLIC_URL + project.liveUrl} 
+           target="_blank" 
+           rel="noopener noreferrer"
+           whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             View Live Project

@@ -4,13 +4,16 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const HeroSection = styled.section`
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 2rem;
   background: #f5f5f5;
   color: black;
+  @media (max-width: 768px) {
+    padding: 0 1.25rem;
+  }
 `;
 
 const HeroContent = styled.div`
@@ -20,23 +23,15 @@ const HeroContent = styled.div`
 `;
 
 const Title = styled(motion.h1)`
-  font-size: 4rem;
+  font-size: clamp(2.25rem, 6vw, 4rem);
   margin-bottom: 1rem;
   font-weight: 700;
-  
-  @media (max-width: 768px) {
-    font-size: 2.5rem;
-  }
 `;
 
 const Subtitle = styled(motion.h2)`
-  font-size: 2rem;
+  font-size: clamp(1.25rem, 4vw, 2rem);
   margin-bottom: 2rem;
   font-weight: 400;
-  
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
-  }
 `;
 
 const CTA = styled(motion(Link))`
@@ -52,6 +47,10 @@ const CTA = styled(motion(Link))`
   text-decoration: none;
   display: inline-block;
   text-align: center;
+  
+  @media (max-width: 480px) {
+    width: 100%;
+  }
   
   &:hover {
     transform: translateY(-5px);

@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import AboutImageFile from '../assets/picture.JPG'; // ✅ Correct relative path
 
 const AboutSection = styled.section`
   padding: 5rem 2rem;
+  background-color: #fff;
 `;
 
 const Container = styled.div`
@@ -21,30 +23,34 @@ const AboutGrid = styled.div`
   }
 `;
 
-const AboutImage = styled.img`
+// ✅ Responsive image styling
+const AboutImage = styled(motion.img)`
   width: 100%;
+  max-width: 600px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
 `;
 
 const AboutContent = styled.div``;
 
 const Title = styled.h2`
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4.5vw, 2.5rem);
   margin-bottom: 1.5rem;
-  color: #333;
+  color: #000;
 `;
 
 const Subtitle = styled.h3`
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 3.5vw, 1.5rem);
   margin-bottom: 1rem;
-  color: #6e8efb;
+  color: #0a192f;
 `;
 
 const Description = styled.p`
   margin-bottom: 1.5rem;
-  color: #666;
+  color: #444;
   line-height: 1.8;
 `;
 
@@ -55,8 +61,12 @@ const SkillsSection = styled.section`
 
 const SkillsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 2rem;
+
+  @media (max-width: 768px) {
+    gap: 1.25rem;
+  }
 `;
 
 const SkillCard = styled(motion.div)`
@@ -70,13 +80,13 @@ const SkillCard = styled(motion.div)`
 const SkillIcon = styled.div`
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #6e8efb;
+  color: #0a192f;
 `;
 
 const SkillTitle = styled.h3`
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: #000;
 `;
 
 const SkillDescription = styled.p`
@@ -89,7 +99,15 @@ const About = () => {
       <AboutSection>
         <Container>
           <AboutGrid>
-            <AboutImage src="https://via.placeholder.com/600x800" alt="Manoa Williamson" />
+            {/* ✅ Image now fixed to 600x800 */}
+            <AboutImage
+              src={AboutImageFile}
+              alt="Manoa Williamson"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            />
+
             <AboutContent>
               <Title>About Me</Title>
               <Subtitle>Web Designer & Developer</Subtitle>
@@ -106,7 +124,8 @@ const About = () => {
           </AboutGrid>
         </Container>
       </AboutSection>
-      
+
+      {/* Skills Section */}
       <SkillsSection>
         <Container>
           <Title style={{ textAlign: 'center', marginBottom: '3rem' }}>My Skills</Title>
