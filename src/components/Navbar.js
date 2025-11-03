@@ -8,17 +8,17 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 1);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
 `;
 
 const Logo = styled(Link)`
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #333;
   text-decoration: none;
@@ -37,7 +37,7 @@ const NavItems = styled.div`
 const NavItem = styled(Link)`
   margin-left: 2rem;
   text-decoration: none;
-  color: #333;
+  color: #000000ff;
   font-weight: 500;
   position: relative;
   
@@ -48,7 +48,7 @@ const NavItem = styled(Link)`
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: #0070f3;
+    background-color: #000000ff;
     transition: width 0.3s ease;
   }
   
@@ -69,7 +69,7 @@ const MobileMenuButton = styled.div`
   span {
     width: 25px;
     height: 3px;
-    background: #333;
+    background: #000000ff;
     margin-bottom: 4px;
     border-radius: 5px;
     transition: all 0.3s ease;
@@ -113,7 +113,7 @@ const Navbar = () => {
   
   return (
     <Nav>
-      <Logo to="/">Manoa Williamson</Logo>
+      <Logo to="/"></Logo>
       
       <NavItems>
         <NavItem to="/">Home</NavItem>

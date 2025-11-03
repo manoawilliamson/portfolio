@@ -80,7 +80,7 @@ const ProjectDescription = styled.p`
 const ProjectLink = styled(Link)`
   display: inline-block;
   padding: 0.75rem 1.25rem;
-  background: linear-gradient(135deg, #000000ff, #69676bff);
+  background: black;
   color: #fff;
   text-decoration: none;
   font-weight: 600;

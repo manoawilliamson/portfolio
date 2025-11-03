@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import Navbar from '../components/Navbar';
 
 const HeroSection = styled.section`
   min-height: 100vh;
@@ -9,7 +10,7 @@ const HeroSection = styled.section`
   flex-direction: column;
   justify-content: center;
   padding: 0 2rem;
-  background: #f5f5f5;
+  background: #ffffffff;
   color: black;
   @media (max-width: 768px) {
     padding: 0 1.25rem;
@@ -36,7 +37,7 @@ const Subtitle = styled(motion.h2)`
 
 const CTA = styled(motion(Link))`
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #000000ff, #69676bff);
+  background: black;
   color: #ffffffff;
   border: none;
   border-radius: 0;
@@ -119,6 +120,7 @@ const ProjectLink = styled.a`
 const Home = () => {
   return (
     <>
+      <Navbar />
       <HeroSection>
         <HeroContent>
           <Title

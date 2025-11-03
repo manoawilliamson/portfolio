@@ -72,7 +72,7 @@ const Textarea = styled.textarea`
 `;
 
 const SubmitButton = styled(motion.button)`
-  background: linear-gradient(135deg, #000000ff, #69676bff);
+  background: black;
   color: white;
   padding: 1rem 2rem;
   border: none;

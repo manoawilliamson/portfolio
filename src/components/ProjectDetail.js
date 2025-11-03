@@ -121,7 +121,7 @@ const GalleryImage = styled.img`
 
 const CTAButton = styled(motion.a)`
   display: inline-block;
-  background: linear-gradient(135deg, #000000ff, #69676bff);
+  background: black;
   color: white;
   padding: 1rem 2rem;
   border-radius: 5px;
@@ -144,6 +144,7 @@ const ProjectDetail = ({ project }) => {
         <BackButton to="/projects">
           <i className="fas fa-arrow-left" style={{ marginRight: '0.5rem' }}></i> Back to Projects
         </BackButton>
+        
         
         <HeroImage src={project.heroImage} alt={project.title} />
         
